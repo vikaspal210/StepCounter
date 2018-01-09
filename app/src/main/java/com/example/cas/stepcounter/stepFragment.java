@@ -20,7 +20,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     //constants
     private TextView tview;
     private Button BtnStart, BtnStop;
-    
+
     private StepDetector simpleStepDetector;
     private SensorManager sensorManager;
     private Sensor accel;

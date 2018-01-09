@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity  {
 
-
+    TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +20,14 @@ public class MainActivity extends AppCompatActivity  {
         viewPager.setAdapter(adapter);
 
         //code for adding TABS
-        TabLayout tabLayout=(TabLayout)findViewById(R.id.tablayout);
+        tabLayout=(TabLayout)findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
+    }
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_48dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_home_white_48dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_home_white_48dp);
     }
 
 }

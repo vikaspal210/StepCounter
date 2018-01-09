@@ -10,12 +10,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitle[]=new String[] {"Step Counter","Daily Water","BMI"};
+    //tab titles
+    private String tabTitle[]=new String[] {"Activity","Water Need","BMI"};
 
+    //needed cunstructor
     public StepFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
+    //get item method
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
@@ -27,11 +30,13 @@ public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
         }
     }
 
+    //count no of fragments
     @Override
     public int getCount() {
         return 3;
     }
 
+    //tab title setting
     @Override
     public CharSequence getPageTitle(int position) {
         return tabTitle[position];

@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
 
     //tab titles
-    private String tabTitle[]=new String[] {"Activity","Water Need","BMI"};
+    private String tabTitle[] = new String[]{"Activity", "Progress", "Profile"};
 
     //needed cunstructor
     public StepFragmentPagerAdapter(FragmentManager fm) {
@@ -24,9 +24,9 @@ public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new stepFragment();
         } else if(position==1){
-            return new WaterFragment();
+            return new ProgressFragment();
         }else{
-            return new BMIFragment();
+            return new ProfileFragment();
         }
     }
 

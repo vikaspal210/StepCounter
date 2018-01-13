@@ -59,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="HEIGHT"
+        android:inputType="numberDecimal"
         android:textSize="16sp" />
 
     <EditText
@@ -66,6 +67,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="WEIGHT"
+        android:inputType="numberDecimal"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/age_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="AGE"
+        android:inputType="numberDecimal"
         android:textSize="16sp" />
 
     <Button

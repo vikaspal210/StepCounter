@@ -16,12 +16,15 @@ public class UserInfo extends AppCompatActivity {
     public static final String Name = "nameKey";
     public static final String HEIGHT = "heightKey";
     public static final String WEIGHT = "weightKey";
+    public static final String AGE = "ageKey";
+
 
     //constants
     SharedPreferences mSharedPreferences;
-    EditText nameET, heightET, weightET;
+    EditText nameET, heightET, weightET,ageET;
     Button mdoneButton;
 
+    //setDefault
     public static void setDefaults(String key, String value, Context context) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = preferences.edit();
@@ -29,11 +32,13 @@ public class UserInfo extends AppCompatActivity {
         editor.commit();
     }
 
+    //getDefault
     public static String getDefaults(String key, Context context) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getString(key, null);
     }
 
+    //onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,7 @@ public class UserInfo extends AppCompatActivity {
         nameET = (EditText) findViewById(R.id.name_ET);
         heightET = (EditText) findViewById(R.id.height_ET);
         weightET = (EditText) findViewById(R.id.weight_ET);
+        ageET = (EditText) findViewById(R.id.age_ET);
         mdoneButton = (Button) findViewById(R.id.done_button);
         //initializing mSharedPreferences
         mSharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
@@ -53,7 +59,7 @@ public class UserInfo extends AppCompatActivity {
                 setDefaults(Name, nameET.getText().toString(), getBaseContext());
                 setDefaults(HEIGHT, heightET.getText().toString(), getBaseContext());
                 setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
-
+                setDefaults(AGE, ageET.getText().toString(), getBaseContext());
                 Toast.makeText(getBaseContext(), getDefaults(Name, getBaseContext()), Toast.LENGTH_LONG).show();
             }
         });

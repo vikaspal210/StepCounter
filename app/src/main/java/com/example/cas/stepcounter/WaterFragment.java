@@ -1,11 +1,8 @@
 package com.example.cas.stepcounter;
 
 
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.format.Formatter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +51,9 @@ public class WaterFragment extends Fragment {
                     waterIntakeValue = dailyWaterIntakeCalculator(mWeight, mAge);
                     System.out.print(waterIntakeValue);
                     waterTextView.setText(String.valueOf(String.format("%.2f", waterIntakeValue)) + " Liters");
+                    //experiment setDefault,getDefault
+                    int sum = 5 * Integer.parseInt(UserInfo.getDefaults(UserInfo.Name, getContext()));
+                    Toast.makeText(getContext(), Integer.toString(sum), Toast.LENGTH_LONG).show();
                 }
             }
         });

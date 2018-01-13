@@ -3,6 +3,7 @@ package com.example.cas.stepcounter;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,18 @@ public class UserInfo extends AppCompatActivity {
     EditText nameET, heightET, weightET;
     Button mdoneButton;
 
+    public static void setDefaults(String key, String value, Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    public static String getDefaults(String key, Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getString(key, null);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +50,11 @@ public class UserInfo extends AppCompatActivity {
         mdoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor editor = mSharedPreferences.edit();
-                editor.putString(Name, nameET.getText().toString());
-                editor.putString(HEIGHT, heightET.getText().toString());
-                editor.putString(WEIGHT, weightET.getText().toString());
-                editor.commit();
+                setDefaults(Name, nameET.getText().toString(), getBaseContext());
+                setDefaults(HEIGHT, heightET.getText().toString(), getBaseContext());
+                setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
 
-                Toast.makeText(getBaseContext(), mSharedPreferences.getString(Name, "nameKey"), Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), getDefaults(Name, getBaseContext()), Toast.LENGTH_LONG).show();
             }
         });
     }

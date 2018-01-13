@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -33,11 +32,9 @@ public class MainActivity extends AppCompatActivity  {
 
         if (isFirstRun) {
             startActivity(new Intent(MainActivity.this, UserInfo.class));
-            Toast.makeText(MainActivity.this, "First Run", Toast.LENGTH_LONG)
-                    .show();
         }
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).commit();
+                .putBoolean("isFirstRun", false).apply();
     }
 
     //setting tab icons for images...

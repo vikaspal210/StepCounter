@@ -28,11 +28,11 @@
             android:layout_toEndOf="@+id/avatar"
             android:layout_toRightOf="@+id/avatar"
             android:paddingTop="30dp"
-            android:text="Welcome!"
+            android:text="@string/welcome"
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/name_editText"
+            android:id="@+id/name_ET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/avatar"
@@ -45,26 +45,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Tell us more about you." />
+        android:text="@string/tell" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="With more info we can calculate your daily water need, your BMI, calories burned." />
+        android:text="@string/With" />
 
-    <TextView
+    <EditText
+        android:id="@+id/height_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="HEIGHT"
-        android:textSize="20sp" />
+        android:hint="HEIGHT"
+        android:textSize="16sp" />
 
-    <TextView
+    <EditText
+        android:id="@+id/weight_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="WEIGHT"
-        android:textSize="20sp" />
+        android:hint="WEIGHT"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightBlueCustom"
+        android:text="DONE"
+        android:textColor="@color/tabText" />
+
 
 </LinearLayout>

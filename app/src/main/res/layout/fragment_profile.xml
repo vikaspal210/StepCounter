@@ -1,13 +1,162 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.cas.stepcounter.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileCV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/profileNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Vikas Pal"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/mainHeading"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileHeightCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Height"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/secondaryHeading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_heightTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="---"
+                    android:textColor="@color/colorLightBlueCustom"
+                    android:textSize="@dimen/secondaryHeading" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileWeightCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Weight"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/secondaryHeading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profileWeightTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="---"
+                    android:textColor="@color/colorLightBlueCustom"
+                    android:textSize="@dimen/secondaryHeading" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileAgeCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Age"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/secondaryHeading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profileAgeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="---"
+                    android:textColor="@color/colorLightBlueCustom"
+                    android:textSize="@dimen/secondaryHeading" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

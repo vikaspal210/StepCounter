@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity  {
 
+    public static Boolean isFirstRun;
     private TabLayout tabLayout;
 
     @Override
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity  {
         setupTabIcons();
 
         //code to check if UserInfo have run once if not runs UserInfo.class then MainActivity.class
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+        isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
 
         if (isFirstRun) {

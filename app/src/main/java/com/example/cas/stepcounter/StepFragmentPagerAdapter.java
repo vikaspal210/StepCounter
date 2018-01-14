@@ -24,9 +24,9 @@ public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new stepFragment();
         } else if(position==1){
-            return new ProgressFragment();
-        }else{
             return new ProfileFragment();
+        }else{
+            return new ProgressFragment();
         }
     }
 

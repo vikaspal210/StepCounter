@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +23,8 @@ public class UserInfo extends AppCompatActivity {
 
     //constants
     SharedPreferences mSharedPreferences;
-    EditText nameET, heightET, weightET,ageET;
     Button mdoneButton;
+    private EditText nameET, heightET, weightET, ageET;
 
     //setDefault
     public static void setDefaults(String key, String value, Context context) {
@@ -57,12 +58,22 @@ public class UserInfo extends AppCompatActivity {
         mdoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setDefaults(Name, nameET.getText().toString(), getBaseContext());
+                //logic to check if edit text is empty.
+                if (TextUtils.isEmpty(nameET.getText().toString().trim()) ||
+                        TextUtils.isEmpty(heightET.getText().toString().trim()) ||
+                        TextUtils.isEmpty(weightET.getText().toString().trim()) ||
+                        TextUtils.isEmpty(ageET.getText().toString().trim())) {
+                    Toast.makeText(getBaseContext(), "Fields can't be empty!", Toast.LENGTH_LONG).show();
+                } else {
+                    setDefaults(Name, nameET.getText().toString(), getBaseContext());
                 setDefaults(HEIGHT, heightET.getText().toString(), getBaseContext());
                 setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
                 setDefaults(AGE, ageET.getText().toString(), getBaseContext());
-                Toast.makeText(getBaseContext(), getDefaults(Name, getBaseContext()), Toast.LENGTH_LONG).show();
-                startActivity(new Intent(UserInfo.this, MainActivity.class));
+                    //add preference to check if UserInfo added
+                    getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                            .putBoolean("isFirstRun", false).apply();
+                    startActivity(new Intent(UserInfo.this, MainActivity.class));
+                }
             }
         });
     }

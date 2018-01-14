@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity  {
         if (isFirstRun) {
             startActivity(new Intent(MainActivity.this, UserInfo.class));
         }
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).apply();
+
     }
 
     //setting tab icons for images...

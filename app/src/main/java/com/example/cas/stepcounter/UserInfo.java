@@ -1,6 +1,7 @@
 package com.example.cas.stepcounter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -61,6 +62,7 @@ public class UserInfo extends AppCompatActivity {
                 setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
                 setDefaults(AGE, ageET.getText().toString(), getBaseContext());
                 Toast.makeText(getBaseContext(), getDefaults(Name, getBaseContext()), Toast.LENGTH_LONG).show();
+                startActivity(new Intent(UserInfo.this, MainActivity.class));
             }
         });
     }

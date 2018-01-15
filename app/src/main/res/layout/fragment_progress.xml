@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,10 +12,30 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card_viewIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/DodgerBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Progress"
+                android:textColor="@color/Gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="12dp">
 
             <LinearLayout
@@ -50,7 +71,7 @@
             android:id="@+id/card_view2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp">
+            android:layout_marginBottom="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,6 +113,199 @@
                     android:textColor="@color/colorLightBlueCustom"
                     android:textSize="20sp" />
             </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="STATISTICS"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="60dp">
+
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/cardview_dark_background" />
+
+
+                <LinearLayout
+                    android:id="@+id/sunLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/sunV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/sunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sun" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/monLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/sunLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/monV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/monTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Mon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tueLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/monLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/tueV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/tueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Tue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wedLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tueLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/wedV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/wedTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Wed" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thrLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/wedLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/thrV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/thrTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Thr" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/friLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/thrLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/friV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/friTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Fri" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/satLL"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/friLL"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/satV"
+                        android:layout_width="6dp"
+                        android:layout_height="112dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_states" />
+
+                    <TextView
+                        android:id="@+id/satTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sat" />
+                </LinearLayout>
+
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 

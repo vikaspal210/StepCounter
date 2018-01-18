@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,7 +14,7 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements NumberPicker.OnValueChangeListener {
 
     //constants
     private String name, height, weight, age;
@@ -31,10 +32,17 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //initializing name ,height ,weight ,age Text view
-        nameTV = (TextView) view.findViewById(R.id.profileNameTV);
-        heightTV = (TextView) view.findViewById(R.id.profile_heightTV);
-        weightTV = (TextView) view.findViewById(R.id.profileWeightTV);
-        ageTV = (TextView) view.findViewById(R.id.profileAgeTV);
+        nameTV = view.findViewById(R.id.profileNameTV);
+        heightTV = view.findViewById(R.id.profile_heightTV);
+        weightTV = view.findViewById(R.id.profileWeightTV);
+        ageTV = view.findViewById(R.id.profileAgeTV);
+
+        heightTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNumberPicker(v);
+            }
+        });
 
         //logic for checking null exception
         if (MainActivity.isFirstRun) {
@@ -53,6 +61,19 @@ public class ProfileFragment extends Fragment {
         }
 
         return view;
+    }
+
+
+    //Number picker dialog
+    @Override
+    public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+        Toast.makeText(getContext(), "selected number " + numberPicker.getValue(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void showNumberPicker(View view) {
+        NumberDialogFragment newFragment = new NumberDialogFragment();
+        newFragment.setValueChangeListener(this);
+        newFragment.show(getFragmentManager(), "time picker");
     }
 
 }

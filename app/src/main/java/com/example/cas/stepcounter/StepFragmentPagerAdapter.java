@@ -22,7 +22,7 @@ public class StepFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new SwipeLeftFragment();
+            return new stepFragment();
         } else if(position==1){
             return new ProgressFragment();
         } else {

@@ -19,12 +19,13 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
     //constants
     private TextView tview;
-    private Button BtnStart, BtnStop;
+    private Button BtnStart;
 
     private StepDetector simpleStepDetector;
     private SensorManager sensorManager;
     private Sensor accel;
     private int numSteps;
+    private Boolean isOff=true;
 
 
     public stepFragment() {
@@ -46,22 +47,19 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         //initialise Text View and Button instances
         tview = (TextView) view.findViewById(R.id.tv_steps);
         BtnStart = (Button) view.findViewById(R.id.btn_start);
-        BtnStop = (Button) view.findViewById(R.id.btn_stop);
 
         //listening for button click
         BtnStart.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                numSteps = 0;
-                sensorManager.registerListener(stepFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
-            }
-        });
-        BtnStop.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                sensorManager.unregisterListener(stepFragment.this);
+                if(isOff) {
+                    numSteps = 0;
+                    sensorManager.registerListener(stepFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
+                    isOff=false;
+                }else{
+                    sensorManager.unregisterListener(stepFragment.this);
+                isOff=true;}
             }
         });
         return view;
@@ -84,7 +82,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     @Override
     public void step(long timeNs) {
         numSteps++;
-        tview.setText(numSteps + "");
+        int no=numSteps*7;
+        tview.setText(no + "");
     }
 
 }

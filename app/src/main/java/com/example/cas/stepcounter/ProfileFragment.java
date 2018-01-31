@@ -66,18 +66,11 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         if (MainActivity.isFirstRun) {
             Toast.makeText(getContext(), "Empty", Toast.LENGTH_SHORT).show();
         } else {
-            //gettign values from shared preferences
-            name = UserInfo.getDefaults(UserInfo.Name, getContext());
-            height = UserInfo.getDefaults(UserInfo.HEIGHT, getContext());
-            weight = UserInfo.getDefaults(UserInfo.WEIGHT, getContext());
-            age = UserInfo.getDefaults(UserInfo.AGE, getContext());
+            //getting values from shared preferences
+            getTextToLayouts();
             //setting text
-            nameTV.setText(name);
-            heightTV.setText(height);
-            weightTV.setText(weight);
-            ageTV.setText(age);
+            setTextToLayouts();
         }
-
         return view;
     }
 
@@ -94,4 +87,19 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         newFragment.setValueChangeListener(this);
         newFragment.show(getFragmentManager(), "time picker");
     }
+
+    public void setTextToLayouts() {
+        nameTV.setText(name);
+        heightTV.setText(height);
+        weightTV.setText(weight);
+        ageTV.setText(age);
+    }
+
+    public void getTextToLayouts() {
+        name = UserInfo.getDefaults(UserInfo.Name, getContext());
+        height = UserInfo.getDefaults(UserInfo.HEIGHT, getContext());
+        weight = UserInfo.getDefaults(UserInfo.WEIGHT, getContext());
+        age = UserInfo.getDefaults(UserInfo.AGE, getContext());
+    }
+
 }

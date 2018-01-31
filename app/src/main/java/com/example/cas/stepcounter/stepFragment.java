@@ -18,13 +18,14 @@ import static android.content.Context.SENSOR_SERVICE;
 public class stepFragment extends Fragment implements SensorEventListener, StepListener {
 
     //constants
-    private TextView tview;
+    private TextView tview, calorieTV, distanceTV;
     private Button BtnStart;
 
     private StepDetector simpleStepDetector;
     private SensorManager sensorManager;
     private Sensor accel;
     private int numSteps;
+    private float distance, calorie;
     private Boolean isOff=true;
 
 
@@ -45,8 +46,10 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         simpleStepDetector.registerListener(this);
 
         //initialise Text View and Button instances
-        tview = (TextView) view.findViewById(R.id.tv_steps);
-        BtnStart = (Button) view.findViewById(R.id.btn_start);
+        tview = view.findViewById(R.id.tv_steps);
+        calorieTV = view.findViewById(R.id.tv_calories);
+        distanceTV = view.findViewById(R.id.tv_distance);
+        BtnStart = view.findViewById(R.id.btn_start);
 
         //listening for button click
         BtnStart.setOnClickListener(new View.OnClickListener() {
@@ -82,8 +85,10 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     @Override
     public void step(long timeNs) {
         numSteps++;
-        int no=numSteps*7;
+        int no = numSteps * 100;
+        distance = no * 8 / 10000;
         tview.setText(no + "");
+        distanceTV.setText(distance + " km");
     }
 
 }

@@ -11,25 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_viewIntro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/DodgerBlue">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:text="Progress"
-                android:textColor="@color/Gold"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view"
@@ -54,6 +36,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
+
                 <TextView
                     android:id="@+id/water_textView"
                     android:layout_width="wrap_content"
@@ -62,8 +45,31 @@
                     android:layout_marginBottom="12dp"
                     android:layout_marginTop="12dp"
                     android:text="--- ---"
-                    android:textColor="@color/colorLightBlueCustom"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorLightBlueCustom" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="9X" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cup" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/body" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -89,6 +95,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
+
                 <TextView
                     android:id="@+id/bmi_textView"
                     android:layout_width="wrap_content"
@@ -110,11 +117,36 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     android:text="---"
-                    android:textColor="@color/colorLightBlueCustom"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorLightBlueCustom" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/bmiranges" />
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_viewIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/DodgerBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Statistics"
+                android:textColor="@color/Gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,7 +158,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:text="STATISTICS"
+                android:text="Weekly"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="bold" />

@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         //View pager and View pager adapter setting
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = findViewById(R.id.viewpager);
         StepFragmentPagerAdapter adapter = new StepFragmentPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         //code for adding TABS
-        tabLayout=(TabLayout)findViewById(R.id.tablayout);
+        tabLayout = findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
 
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity  {
 
     //setting tab icons for images...
     private void setupTabIcons() {
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_48dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_home_white_48dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_home_white_48dp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.feet);
+        tabLayout.getTabAt(1).setIcon(R.drawable.progress);
+        tabLayout.getTabAt(2).setIcon(R.drawable.profile);
     }
 }

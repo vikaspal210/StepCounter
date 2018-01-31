@@ -15,6 +15,7 @@ import android.widget.NumberPicker;
  * A simple {@link Fragment} subclass.
  */
 public class NumberDialogFragment extends DialogFragment {
+    ProfileFragment profileFragment = new ProfileFragment();
     //constants
     private NumberPicker.OnValueChangeListener valueChangeListener;
 
@@ -24,7 +25,6 @@ public class NumberDialogFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
         //container design
         //Horizontal LinerLayout
         LinearLayout linLayoutH =
@@ -76,8 +76,8 @@ public class NumberDialogFragment extends DialogFragment {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                valueChangeListener.onValueChange(np,
-                        np.getValue(), np.getValue());
+                UserInfo.setDefaults(UserInfo.WEIGHT, Integer.toString(np.getValue()), getContext());
+
                 valueChangeListener.onValueChange(npUnit,
                         npUnit.getValue(), npUnit.getValue());
             }
@@ -98,8 +98,5 @@ public class NumberDialogFragment extends DialogFragment {
         this.valueChangeListener = valueChangeListener;
     }
 
-    public int choice(int no) {
-        return no;
-    }
 
 }

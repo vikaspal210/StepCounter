@@ -7,21 +7,22 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.cas.stepcounter.MainActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/Teal"
+        app:tabIndicatorColor="@color/tabText"
+        app:tabSelectedTextColor="@color/Gold"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="@color/tabText" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    <android.support.design.widget.TabLayout
-        app:tabTextAppearance="@style/MineCustomTabText"
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabBackground="@color/tabColor"
-        app:tabIndicatorColor="@color/tabText"
-        app:tabTextColor="@color/tabText"
-        app:tabSelectedTextColor="@color/colorLightBlueCustom"/>
-
 
 
 </LinearLayout>

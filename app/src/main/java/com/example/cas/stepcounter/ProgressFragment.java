@@ -38,9 +38,9 @@ public class ProgressFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_progress, container, false);
 
         //initializing Water,BMI Text View
-        waterTextView = (TextView) view.findViewById(R.id.water_textView);
-        bmiTV = (TextView) view.findViewById(R.id.bmi_textView);
-        bmiCategoryTV = (TextView) view.findViewById(R.id.bmi_category_textView);
+        waterTextView = view.findViewById(R.id.water_textView);
+        bmiTV = view.findViewById(R.id.bmi_textView);
+        bmiCategoryTV = view.findViewById(R.id.bmi_category_textView);
 
 
         if (MainActivity.isFirstRun) {

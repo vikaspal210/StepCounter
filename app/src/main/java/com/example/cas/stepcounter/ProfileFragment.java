@@ -1,8 +1,8 @@
 package com.example.cas.stepcounter;
 
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,7 +64,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
 
         //logic for checking null exception
         if (MainActivity.isFirstRun) {
-            Toast.makeText(getContext(), "Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity().getBaseContext(), "Empty", Toast.LENGTH_SHORT).show();
         } else {
             //getting values from shared preferences
             getTextToLayouts();
@@ -78,14 +78,13 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
     //Number Picker onValueChange
     @Override
     public void onValueChange(NumberPicker numberPicker, int i, int i1) {
-        Toast.makeText(getContext(), "selected number " + numberPicker.getValue(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity().getBaseContext(), "selected number " + numberPicker.getValue(), Toast.LENGTH_SHORT).show();
     }
 
     //showNumberPicker
     public void showNumberPicker(View view) {
         NumberDialogFragment newFragment = new NumberDialogFragment();
         newFragment.setValueChangeListener(this);
-        newFragment.show(getFragmentManager(), "time picker");
     }
 
     public void setTextToLayouts() {
@@ -96,10 +95,10 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
     }
 
     public void getTextToLayouts() {
-        name = UserInfo.getDefaults(UserInfo.Name, getContext());
-        height = UserInfo.getDefaults(UserInfo.HEIGHT, getContext());
-        weight = UserInfo.getDefaults(UserInfo.WEIGHT, getContext());
-        age = UserInfo.getDefaults(UserInfo.AGE, getContext());
+        name = UserInfo.getDefaults(UserInfo.Name, getActivity().getBaseContext());
+        height = UserInfo.getDefaults(UserInfo.HEIGHT, getActivity().getBaseContext());
+        weight = UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext());
+        age = UserInfo.getDefaults(UserInfo.AGE, getActivity().getBaseContext());
     }
 
 }

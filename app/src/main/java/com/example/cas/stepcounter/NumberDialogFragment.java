@@ -12,11 +12,26 @@ import android.widget.NumberPicker;
 
 
 public class NumberDialogFragment extends DialogFragment {
+
+
+    private DialogInterface.OnDismissListener onDismissListener;
     //constants
     private NumberPicker.OnValueChangeListener valueChangeListener;
 
     public NumberDialogFragment() {
         // Required empty public constructor
+    }
+
+    public void setOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
+        this.onDismissListener = onDismissListener;
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (onDismissListener != null) {
+            onDismissListener.onDismiss(dialog);
+        }
     }
 
     @Override

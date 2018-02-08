@@ -1,6 +1,7 @@
 package com.example.cas.stepcounter;
 
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -87,6 +88,13 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
     public void showNumberPicker(View view) {
         NumberDialogFragment newFragment = new NumberDialogFragment();
         newFragment.setValueChangeListener(this);
+        newFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                getTextToLayouts();
+                setTextToLayouts();
+            }
+        });
         newFragment.show(getFragmentManager(), "dsd");
     }
 

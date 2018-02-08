@@ -3,15 +3,15 @@
     <item
         android:id="@+id/action_steps"
         android:icon="@drawable/steps"
-        android:title="steps" />
+        android:title="Steps" />
 
     <item
         android:id="@+id/action_progress"
         android:icon="@drawable/progress"
-        android:title="progress" />
+        android:title="Progress" />
 
     <item
         android:id="@+id/action_profile"
         android:icon="@drawable/profile"
-        android:title="profile" />
+        android:title="Profile" />
 </menu>

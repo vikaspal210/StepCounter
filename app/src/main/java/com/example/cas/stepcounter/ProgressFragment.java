@@ -47,12 +47,12 @@ public class ProgressFragment extends Fragment {
 
 
         if (MainActivity.isFirstRun) {
-            Toast.makeText(getContext(), "Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity().getBaseContext(), "Empty", Toast.LENGTH_SHORT).show();
         } else {
             //initialize weight,height,age.
-            mWeight = Float.valueOf(UserInfo.getDefaults(UserInfo.WEIGHT, getContext()));
-            mAge = Float.valueOf(UserInfo.getDefaults(UserInfo.AGE, getContext()));
-            mHeight = Float.valueOf(UserInfo.getDefaults(UserInfo.HEIGHT, getContext()));
+            mWeight = Float.valueOf(UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext()));
+            mAge = Float.valueOf(UserInfo.getDefaults(UserInfo.AGE, getActivity().getBaseContext()));
+            mHeight = Float.valueOf(UserInfo.getDefaults(UserInfo.HEIGHT, getActivity().getBaseContext()));
 
             //calculate water
             waterIntakeValue = dailyWaterIntakeCalculator(mWeight, mAge);

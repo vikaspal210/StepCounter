@@ -1,6 +1,5 @@
 package com.example.cas.stepcounter;
 
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -49,6 +48,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         heightCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getActivity().getBaseContext(), "Testing touch of CV", Toast.LENGTH_SHORT).show();
                 showNumberPicker(v);
             }
         });
@@ -87,6 +87,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
     public void showNumberPicker(View view) {
         NumberDialogFragment newFragment = new NumberDialogFragment();
         newFragment.setValueChangeListener(this);
+        newFragment.show(getFragmentManager(), "dsd");
     }
 
     public void setTextToLayouts() {
@@ -102,4 +103,5 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         weight = UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext());
         age = UserInfo.getDefaults(UserInfo.AGE, getActivity().getBaseContext());
     }
+
 }

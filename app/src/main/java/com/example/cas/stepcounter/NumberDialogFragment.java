@@ -2,20 +2,16 @@ package com.example.cas.stepcounter;
 
 
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class NumberDialogFragment extends DialogFragment {
-    ProfileFragment profileFragment = new ProfileFragment();
     //constants
     private NumberPicker.OnValueChangeListener valueChangeListener;
 
@@ -93,6 +89,10 @@ public class NumberDialogFragment extends DialogFragment {
         return builder.create();
     }
 
+    //Number picker value change listener
+    public NumberPicker.OnValueChangeListener getValueChangeListener() {
+        return valueChangeListener;
+    }
     //setValueChangeListener
     public void setValueChangeListener(NumberPicker.OnValueChangeListener valueChangeListener) {
         this.valueChangeListener = valueChangeListener;

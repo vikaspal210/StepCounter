@@ -33,6 +33,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         // Required empty public constructor
     }
 
+    //code for newInstance
     public static stepFragment newInstance() {
         return new stepFragment();
     }

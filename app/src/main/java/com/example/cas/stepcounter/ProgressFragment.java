@@ -30,6 +30,9 @@ public class ProgressFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static ProgressFragment newInstance() {
+        return new ProgressFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,7 +75,6 @@ public class ProgressFragment extends Fragment {
         //return view
         return view;
     }
-
 
     //daily water intake calculating method
     private double dailyWaterIntakeCalculator(float weight, float age) {

@@ -26,6 +26,9 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         // Required empty public constructor
     }
 
+    public static ProfileFragment newInstance() {
+        return new ProfileFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,7 +77,6 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         return view;
     }
 
-
     //Number Picker onValueChange
     @Override
     public void onValueChange(NumberPicker numberPicker, int i, int i1) {
@@ -100,5 +102,4 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         weight = UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext());
         age = UserInfo.getDefaults(UserInfo.AGE, getActivity().getBaseContext());
     }
-
 }

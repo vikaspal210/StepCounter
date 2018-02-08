@@ -33,6 +33,10 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         // Required empty public constructor
     }
 
+    public static stepFragment newInstance() {
+        return new stepFragment();
+    }
+    //end of onCreateView
 
     //onCreateView for inflating step fragment
     @Override
@@ -67,9 +71,6 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         });
         return view;
     }
-    //end of onCreateView
-
-
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {

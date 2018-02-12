@@ -17,6 +17,7 @@ import android.widget.Toast;
  */
 public class ProfileFragment extends Fragment implements NumberPicker.OnValueChangeListener {
 
+    public static int counter = 0;
     CardView heightCV, weightCV, ageCV;
     //constants
     private String name, height, weight, age;
@@ -26,6 +27,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         // Required empty public constructor
     }
 
+    //new instance of fragment
     public static ProfileFragment newInstance() {
         return new ProfileFragment();
     }
@@ -35,7 +37,6 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
         //initializing name ,height ,weight ,age Text view,cardViews
         nameTV = view.findViewById(R.id.profileNameTV);
         heightTV = view.findViewById(R.id.profile_heightTV);
@@ -49,19 +50,21 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         heightCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity().getBaseContext(), "Testing touch of CV", Toast.LENGTH_SHORT).show();
+                counter = 0;
                 showNumberPicker(v);
             }
         });
         weightCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter = 1;
                 showNumberPicker(v);
             }
         });
         ageCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter = 2;
                 showNumberPicker(v);
             }
         });
@@ -87,7 +90,9 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
     //showNumberPicker
     public void showNumberPicker(View view) {
         NumberDialogFragment newFragment = new NumberDialogFragment();
+        //setValueChangeListener
         newFragment.setValueChangeListener(this);
+        //setOnDismissListener to see when DialogFragment Closes and what to do after it.
         newFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
@@ -98,6 +103,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         newFragment.show(getFragmentManager(), "dsd");
     }
 
+    //setText to layouts method
     public void setTextToLayouts() {
         nameTV.setText(name);
         heightTV.setText(height);
@@ -105,6 +111,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         ageTV.setText(age);
     }
 
+    //getText from layouts method
     public void getTextToLayouts() {
         name = UserInfo.getDefaults(UserInfo.Name, getActivity().getBaseContext());
         height = UserInfo.getDefaults(UserInfo.HEIGHT, getActivity().getBaseContext());

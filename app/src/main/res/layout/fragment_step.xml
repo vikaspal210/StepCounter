@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="12dp"
-    android:layout_marginRight="12dp"
+    android:background="@color/Lavender"
     android:orientation="vertical"
     tools:context="com.example.cas.stepcounter.stepFragment">
 
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="0"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -48,35 +48,42 @@
         </LinearLayout>
 
         <!--steps-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:cardCornerRadius="50dp">
 
-            <TextView
-                android:id="@+id/tv_steps"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="30sp" />
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:src="@drawable/steps" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Steps"
-                android:textColor="@color/colorLightBlueCustom"
-                android:textSize="20sp" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_steps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/steps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Steps"
+                    android:textColor="@color/colorLightBlueCustom"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <!--distance-->
         <LinearLayout
@@ -91,7 +98,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0" />
+                android:text="0"
+                android:textSize="20sp" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -113,7 +121,9 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //code to check if UserInfo have run once if not runs UserInfo.class then MainActivity.class
+        //code to check if UserInfo have run once if not runs UserInfo.class then run MainActivity.class
         isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
         if (isFirstRun) {
             startActivity(new Intent(MainActivity.this, UserInfo.class));
         }
-        //calling fro setting up navigation
+        //setting up navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener

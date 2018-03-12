@@ -1,158 +1,216 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Lavender"
     android:orientation="vertical"
     tools:context="com.example.cas.stepcounter.stepFragment">
 
 
     <LinearLayout
+        android:id="@+id/realLL1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginTop="70dp"
+        android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal">
 
         <!--Calories-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="60dp">
-
-            <TextView
-                android:id="@+id/tv_calories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="20sp" />
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_gravity="center"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="72dp"
+                android:elevation="9dp"
                 android:src="@drawable/calorie" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Calories"
-                android:textColor="@color/colorLightBlueCustom"
-                android:textSize="20sp" />
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="45dp">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="CALORIES"
+                        android:textColor="@color/colorLightBlueCustom"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
 
         <!--steps-->
-        <android.support.v7.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            app:cardCornerRadius="50dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="80dp"
+                android:elevation="9dp"
+                android:src="@drawable/steps" />
 
-                <TextView
-                    android:id="@+id/tv_steps"
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:cardCornerRadius="50dp">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="30sp" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/steps" />
+                    <TextView
+                        android:id="@+id/tv_steps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:text="0"
+                        android:textSize="25sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Steps"
-                    android:textColor="@color/colorLightBlueCustom"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="STEPS"
+                        android:textColor="@color/colorLightBlueCustom"
+                        android:textSize="14sp" />
 
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
 
         <!--distance-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="60dp">
-
-            <TextView
-                android:id="@+id/tv_distance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="20sp" />
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_gravity="center"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="72dp"
+                android:elevation="9dp"
                 android:src="@drawable/distance" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Distance"
-                android:textColor="@color/colorLightBlueCustom"
-                android:textSize="20sp" />
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:cardCornerRadius="45dp">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="DISTANCE"
+                        android:textColor="@color/colorLightBlueCustom"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
     </LinearLayout>
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp">
+        android:id="@+id/realCVSed"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/realLL1"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="100dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_steps_Category"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="Sedentary"
+            android:textColor="@color/colorLightBlueCustom"
+            android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="With steps per day you are:"
-                android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Start/Stop" />
 
     <TextView
-        android:id="@+id/tv_steps_Category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Sedentary"
-        android:textColor="@color/colorLightBlueCustom"
-        android:textSize="20dp" />
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/realLL1"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/step_fragment_bar"
+        android:elevation="5dp"
+        android:text="WITH STEPS PER DAY YOU ARE:"
+        android:textAlignment="center"
+        android:textColor="@color/White" />
 
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Start/Stop" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle"
+        android:elevation="30dp"
+        android:outlineProvider="bounds" />
+</RelativeLayout>

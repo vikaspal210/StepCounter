@@ -18,7 +18,7 @@
         <item name="android:windowContentOverlay">@null</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/Turquoise</item>
-        <item name="colorPrimaryDark">@color/Teal</item>
+        <item name="colorPrimaryDark">@color/RoyalBlue</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>

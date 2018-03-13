@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import static android.content.Context.SENSOR_SERVICE;
@@ -19,7 +19,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
     //constants
     private TextView tview, calorieTV, distanceTV;
-    private Button BtnStart;
+    private ImageView BtnStart;
 
     private StepDetector simpleStepDetector;
     private SensorManager sensorManager;

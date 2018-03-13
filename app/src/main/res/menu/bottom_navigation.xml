@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_steps"
-        android:icon="@drawable/steps"
-        android:title="Steps" />
+        android:icon="@drawable/activity_white"
+        android:title="ACTIVITY" />
 
     <item
         android:id="@+id/action_progress"
-        android:icon="@drawable/progress"
-        android:title="Progress" />
+        android:icon="@drawable/progress_white"
+        android:title="PROGRESS" />
 
     <item
         android:id="@+id/action_profile"
-        android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:icon="@drawable/profile_white"
+        android:title="PROFILE" />
 </menu>

@@ -1,9 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Lavender"
+    android:background="@color/White"
     android:orientation="vertical"
     tools:context="com.example.cas.stepcounter.ProgressFragment">
 
@@ -12,336 +11,279 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="You are Good! Keep Going"
+            android:textStyle="bold" />
 
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="12dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:text="YOUR DAILY WATER NEED IS"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:id="@+id/water_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginTop="12dp"
-                    android:text="--- ---"
-                    android:textColor="@color/colorLightBlueCustom" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="9X" />
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/cup" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="12dp"
-                    android:src="@drawable/body" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:text="YOUR BMI IS"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:id="@+id/bmi_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:text="---"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/bmi_category_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:text="---"
-                    android:textColor="@color/colorLightBlueCustom" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="12dp"
-                    android:src="@drawable/bmiranges" />
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_viewIntro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/DodgerBlue">
+            android:layout_marginTop="12dp"
+            android:background="@drawable/blueroundbar"
+            android:gravity="center"
+            android:text="YOUR DAILY WATER NEED IS"
+            android:textAlignment="gravity"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:text="Statistics"
-                android:textColor="@color/Gold"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cup" />
+
+        <TextView
+            android:id="@+id/water_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:text="--- ---"
+            android:textColor="@color/colorLightBlueCustom" />
+
+        <!--BMI-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/blueroundbar"
+            android:gravity="center"
+            android:text="YOUR BMI IS"
+            android:textAlignment="gravity"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp">
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/bmi_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:text="Weekly"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:text="---"
+                android:textSize="14sp" />
 
-            <RelativeLayout
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/cup" />
+
+            <TextView
+                android:id="@+id/bmi_category_textView"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="60dp">
-
-                <LinearLayout
-                    android:layout_width="280dp"
-                    android:layout_height="2dp"
-                    android:layout_alignParentTop="true"
-                    android:background="@color/cardview_dark_background" />
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:textColor="@color/healthyGreen" />
 
 
-                <LinearLayout
-                    android:id="@+id/sunLL"
-                    android:layout_width="40dp"
+        </LinearLayout>
+
+
+        <!--Statictics-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/blueroundbar"
+            android:gravity="center"
+            android:text="STATISTICS"
+            android:textAlignment="gravity"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="2dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/cardview_dark_background" />
+
+
+            <LinearLayout
+                android:id="@+id/sunLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/sunV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
+
+                <TextView
+                    android:id="@+id/sunTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Sun" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/sunV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/monLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/sunLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/sunTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Sun" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/monV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/monLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/monTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/sunLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Mon" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/monV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/tueLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/monLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/monTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Mon" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/tueV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/tueLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/tueTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/monLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Tue" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/tueV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/wedLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/tueLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tueTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Tue" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/wedV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/wedLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/wedTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/tueLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Wed" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/wedV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/thrLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/wedLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/wedTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Wed" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/thrV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/thrLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/thrTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/wedLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Thr" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/thrV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/friLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/thrLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/thrTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Thr" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/friV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/friLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/friTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/thrLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Fri" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/friV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+            <LinearLayout
+                android:id="@+id/satLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/friLL"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/friTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Fri" />
-                </LinearLayout>
+                <View
+                    android:id="@+id/satV"
+                    android:layout_width="6dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
 
-                <LinearLayout
-                    android:id="@+id/satLL"
-                    android:layout_width="40dp"
+                <TextView
+                    android:id="@+id/satTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@+id/friLL"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="Sat" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/satV"
-                        android:layout_width="6dp"
-                        android:layout_height="112dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/progressbar_states" />
+        </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/satTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Sat" />
-                </LinearLayout>
-
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
     </LinearLayout>
 
 </ScrollView>

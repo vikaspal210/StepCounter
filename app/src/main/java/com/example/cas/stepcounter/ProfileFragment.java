@@ -3,10 +3,10 @@ package com.example.cas.stepcounter;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class ProfileFragment extends Fragment implements NumberPicker.OnValueChangeListener {
 
     public static int counter = 0;
-    CardView heightCV, weightCV, ageCV;
+    LinearLayout heightCV, weightCV, ageCV;
     //constants
     private String name, height, weight, age;
     private TextView nameTV, heightTV, weightTV, ageTV;

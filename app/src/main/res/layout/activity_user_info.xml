@@ -3,17 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginEnd="12dp"
-    android:layout_marginLeft="12dp"
-    android:layout_marginStart="12dp"
+    android:background="@color/White"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.cas.stepcounter.UserInfo">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textSize="18sp" />
         <ImageView
             android:id="@+id/avatar"
             android:layout_width="wrap_content"
@@ -23,35 +29,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_toEndOf="@+id/avatar"
-            android:layout_toRightOf="@+id/avatar"
-            android:paddingTop="30dp"
-            android:text="@string/welcome"
-            android:textSize="30sp" />
+            android:layout_marginTop="12dp"
+            android:text="@string/tell" />
 
-        <EditText
-            android:id="@+id/name_ET"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/avatar"
-            android:layout_toEndOf="@+id/avatar"
-            android:layout_toRightOf="@+id/avatar"
-            android:hint="Name" />
-    </RelativeLayout>
+            android:layout_marginTop="12dp"
+            android:text="@string/With" />
+    </LinearLayout>
 
-    <TextView
+    <EditText
+        android:id="@+id/name_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/tell" />
+        android:layout_alignBottom="@id/avatar"
+        android:layout_toEndOf="@+id/avatar"
+        android:layout_toRightOf="@+id/avatar"
+        android:hint="Name" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/With" />
 
     <EditText
         android:id="@+id/height_ET"
@@ -81,10 +77,10 @@
     <Button
         android:id="@+id/done_button"
         style="@android:style/Widget.Button"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorLightBlueCustom"
-        android:text="DONE"
+        android:background="@drawable/blueroundbar"
+        android:text="Ready To Go!"
         android:textColor="@color/tabText" />
 
 

@@ -3,22 +3,27 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/Turquoise</item>
-        <item name="colorPrimaryDark">@color/Teal</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorPrimaryDark">@color/colorLightBlueCustom</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/futuramediumbt</item>
     </style>
+
+
     <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">10sp</item>
     </style>
 
+
+    <!--no action bar-->
     <style name="AppTheme.NoTitle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/Turquoise</item>
-        <item name="colorPrimaryDark">@color/RoyalBlue</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorPrimaryDark">@color/colorLightBlueCustom</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>

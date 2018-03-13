@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="secondaryHeading">14dp</dimen>
-    <dimen name="mainHeading">18dp</dimen>
+    <dimen name="secondaryHeading">14sp</dimen>
+    <dimen name="mainHeading">18sp</dimen>
 </resources>

@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 import static android.content.Context.SENSOR_SERVICE;
 
@@ -18,7 +21,7 @@ import static android.content.Context.SENSOR_SERVICE;
 public class stepFragment extends Fragment implements SensorEventListener, StepListener {
 
     //constants
-    private TextView tview, calorieTV, distanceTV;
+    private TextView stepTV, calorieTV, distanceTV;
     private ImageView BtnStart;
 
     private StepDetector simpleStepDetector;
@@ -27,6 +30,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     private int numSteps;
     private float distance, calorie;
     private Boolean isOff=true;
+    private Boolean isNextDay = false;
 
 
     public stepFragment() {
@@ -51,7 +55,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         simpleStepDetector.registerListener(this);
 
         //initialise Text View and Button instances
-        tview = view.findViewById(R.id.tv_steps);
+        stepTV = view.findViewById(R.id.tv_steps);
         calorieTV = view.findViewById(R.id.tv_calories);
         distanceTV = view.findViewById(R.id.tv_distance);
         BtnStart = view.findViewById(R.id.btn_start);
@@ -61,6 +65,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
             @Override
             public void onClick(View arg0) {
+                storeData();
                 if(isOff) {
                     numSteps = 0;
                     sensorManager.registerListener(stepFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
@@ -68,6 +73,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                 }else{
                     sensorManager.unregisterListener(stepFragment.this);
                 isOff=true;}
+
+
             }
         });
         return view;
@@ -86,11 +93,45 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
     @Override
     public void step(long timeNs) {
+        //calculating steps
         numSteps++;
-        int no = numSteps * 100;
+        int no = numSteps * 1;
+
+        //calculating distance
         distance = no * 8 / 10000;
-        tview.setText(no + "");
+        //set text to TextView's
+        stepTV.setText(no + "");
         distanceTV.setText(distance + " km");
     }
+
+    private void storeData() {
+        Calendar c = Calendar.getInstance();
+        int todayDay = c.get(Calendar.DAY_OF_WEEK);
+        switch (todayDay) {
+            case 1:
+                Toast.makeText(getActivity(), "Its Sunday", Toast.LENGTH_SHORT).show();
+                break;
+            case 2:
+                Toast.makeText(getActivity(), "Its Monday", Toast.LENGTH_SHORT).show();
+                break;
+            case 3:
+                Toast.makeText(getActivity(), "Its Tuesday", Toast.LENGTH_SHORT).show();
+                break;
+            case 4:
+                Toast.makeText(getActivity(), "Its Wednesday", Toast.LENGTH_SHORT).show();
+                break;
+            case 5:
+                Toast.makeText(getActivity(), "Its Thursday", Toast.LENGTH_SHORT).show();
+                break;
+            case 6:
+                Toast.makeText(getActivity(), "Its Friday", Toast.LENGTH_SHORT).show();
+                break;
+            case 7:
+                Toast.makeText(getActivity(), "Its Saturday", Toast.LENGTH_SHORT).show();
+                break;
+        }//switch END
+    }
+
+
 
 }

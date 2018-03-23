@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">StepCounter</string>
+    <string name="app_name">Step Counter</string>
     <string name="welcome">Welcome!</string>
     <string name="tell">Tell us more about you.</string>
-    <string name="With">With more info we can calculate
-        your daily water need,
-        your BMI, calories burned.</string>
+    <string name="With">With more info we can calculate your daily water need, your Body Mass Index (BMI), calories burned.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

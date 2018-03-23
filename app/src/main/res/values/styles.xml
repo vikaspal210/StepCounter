@@ -23,7 +23,9 @@
         <item name="android:windowContentOverlay">@null</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/White</item>
-        <item name="colorPrimaryDark">@color/colorLightBlueCustom</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/darkBlue</item>
+        <item name="colorAccent">@color/darkBlue</item>
     </style>
+
+
 </resources>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
     android:background="@color/White"
     tools:context="com.example.cas.stepcounter.ProfileFragment">
 
@@ -22,7 +23,9 @@
                     android:layout_height="92dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="24dp"
+                    android:contentDescription="emma watson is a girl"
                     android:src="@drawable/avatar" />
+
 
                 <TextView
                     android:id="@+id/profileNameTV"
@@ -30,11 +33,19 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="24dp"
                     android:layout_marginTop="24dp"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/mainHeading"
+                    android:textColor="@color/colorLightBlueCustom"
+                    android:textSize="30dp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:text="You are doing quite good."
+                    android:textSize="@dimen/mainHeading" />
             </LinearLayout>
 
 

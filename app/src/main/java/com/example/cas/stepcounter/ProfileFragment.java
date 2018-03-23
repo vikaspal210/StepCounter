@@ -68,6 +68,14 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
                 showNumberPicker(v);
             }
         });
+       /* nameTV.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                name = UserInfo.getDefaults(UserInfo.Name, getActivity().getBaseContext());
+                nameTV.setText("Good job, "+name+"!");
+            }
+        });*/
 
         //logic for checking null exception
         if (MainActivity.isFirstRun) {
@@ -105,7 +113,7 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
 
     //setText to layouts method
     public void setTextToLayouts() {
-        nameTV.setText(name);
+        nameTV.setText("Good job, " + name + "!");
         heightTV.setText(height);
         weightTV.setText(weight);
         ageTV.setText(age);

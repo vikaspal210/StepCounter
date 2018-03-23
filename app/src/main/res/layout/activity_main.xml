@@ -6,19 +6,34 @@
     android:layout_height="match_parent"
     tools:context="com.example.cas.stepcounter.MainActivity">
 
+
     <FrameLayout
         android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"
+        android:background="@color/White"
         android:orientation="vertical" />
 
+    <!--upper toolbar-->
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/White"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorLightBlueCustom"></android.support.v7.widget.Toolbar>
+
+    <!--bottom navigation view-->
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/colorLightBlueCustom"
+        android:elevation="6dp"
         app:itemTextColor="@color/tab_color_state"
         app:menu="@menu/bottom_navigation" />
 

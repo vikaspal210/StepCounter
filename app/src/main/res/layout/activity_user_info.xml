@@ -11,13 +11,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/White"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:text="@string/welcome"
             android:textSize="18sp" />
         <ImageView
@@ -30,58 +33,128 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/tell" />
+            android:text="@string/tell"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/With"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <!--General-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/step_fragment_bar"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="12dp"
+            android:text="GENERAL"
+            android:textColor="@color/White" />
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/With" />
+            android:layout_marginLeft="205dp"
+            android:src="@drawable/plus" />
+
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/name_ET"
+
+    <!--Edit Text-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/avatar"
-        android:layout_toEndOf="@+id/avatar"
-        android:layout_toRightOf="@+id/avatar"
-        android:hint="Name" />
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/White"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="12dp"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:hint="Enter your name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp" />
 
 
-    <EditText
-        android:id="@+id/height_ET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="HEIGHT"
-        android:inputType="numberDecimal"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Height" />
 
-    <EditText
-        android:id="@+id/weight_ET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="WEIGHT"
-        android:inputType="numberDecimal"
-        android:textSize="16sp" />
+        <EditText
+            android:id="@+id/height_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:hint="Enter your Height"
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/age_ET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="AGE"
-        android:inputType="numberDecimal"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Weight" />
 
+        <EditText
+            android:id="@+id/weight_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:hint="Enter your Weight"
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Age" />
+
+        <EditText
+            android:id="@+id/age_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="-12dp"
+            android:hint="Enter your Age"
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
     <Button
         android:id="@+id/done_button"
         style="@android:style/Widget.Button"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:background="@drawable/blueroundbar"
         android:text="Ready To Go!"
         android:textColor="@color/tabText" />
-
 
 </LinearLayout>

@@ -28,9 +28,9 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     private SensorManager sensorManager;
     private Sensor accel;
     private int numSteps;
-    private float distance, calorie;
+    private double calorie, distance = 0.00;
     private Boolean isOff=true;
-    private Boolean isNextDay = false;
+    private int[] stepDataBase = new int[7];
 
 
     public stepFragment() {
@@ -65,12 +65,12 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
             @Override
             public void onClick(View arg0) {
-                storeData();
                 if(isOff) {
                     numSteps = 0;
                     sensorManager.registerListener(stepFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
                     isOff=false;
                 }else{
+                    storeData(numSteps);
                     sensorManager.unregisterListener(stepFragment.this);
                 isOff=true;}
 
@@ -98,36 +98,123 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
         int no = numSteps * 1;
 
         //calculating distance
-        distance = no * 8 / 10000;
+        distance = (double) (no * 8) / 10000;
+
+        //calculating calories
+        int weight = Integer.parseInt(UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext()));
+        calorie = ((0.75 * weight) / 2000) * no;
+
         //set text to TextView's
         stepTV.setText(no + "");
-        distanceTV.setText(distance + " km");
+        distanceTV.setText(String.format("%.2f", distance) + " km");
+        calorieTV.setText(String.format("%.2f", calorie) + "cal");
     }
 
-    private void storeData() {
-        Calendar c = Calendar.getInstance();
-        int todayDay = c.get(Calendar.DAY_OF_WEEK);
+
+    //storing DATA
+    private void storeData(int steps) {
+        Calendar calendar = Calendar.getInstance();
+        int todayDay = calendar.get(Calendar.DAY_OF_WEEK);
+
+        //saved Milliseconds logic
+        long savedMillis = System.currentTimeMillis();
+
+        int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
+        int currentMinutes = calendar.get(Calendar.MINUTE);
+        int currentSeconds = calendar.get(Calendar.SECOND);
+
+        int passHour = 23 - currentHour;
+        int passMinutes = 60 - currentMinutes;
+        int passSeconds = 60 - currentSeconds;
+
+        Boolean isNewDay;
+        isNewDay = System.currentTimeMillis() >= savedMillis + passHour * passMinutes * passSeconds * 1000;
+
+        //switch to find which day
         switch (todayDay) {
             case 1:
-                Toast.makeText(getActivity(), "Its Sunday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Sunday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[1] = stepDataBase[1] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[1]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[1] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case 2:
-                Toast.makeText(getActivity(), "Its Monday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Monday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[2] = stepDataBase[2] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[2]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[2] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case 3:
-                Toast.makeText(getActivity(), "Its Tuesday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Tuesday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[3] = stepDataBase[3] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[3]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[3] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case 4:
-                Toast.makeText(getActivity(), "Its Wednesday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Wednesday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[4] = stepDataBase[4] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[4]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[4] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
                 break;
+
+
             case 5:
-                Toast.makeText(getActivity(), "Its Thursday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Thursday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[5] = stepDataBase[5] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[5]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[5] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 6:
-                Toast.makeText(getActivity(), "Its Friday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Friday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[6] = stepDataBase[6] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[6]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[6] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case 7:
-                Toast.makeText(getActivity(), "Its Saturday", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), Long.toString(savedMillis), Toast.LENGTH_SHORT).show();
+                if (!isNewDay) {
+                    Toast.makeText(getActivity(), "Its Saturday", Toast.LENGTH_SHORT).show();
+                    stepDataBase[7] = stepDataBase[7] + steps;
+                    Toast.makeText(getActivity(), Integer.toString(stepDataBase[7]), Toast.LENGTH_SHORT).show();
+                } else {
+                    stepDataBase[7] = 0;
+                    Toast.makeText(getActivity(), "Next Day", Toast.LENGTH_SHORT).show();
+                }
                 break;
         }//switch END
     }

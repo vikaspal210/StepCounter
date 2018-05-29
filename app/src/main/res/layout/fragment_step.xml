@@ -13,7 +13,7 @@
     <LinearLayout
         android:id="@+id/realLL1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:layout_marginBottom="24dp"
         android:layout_marginTop="50dp"
         android:gravity="center_vertical|center_horizontal"
@@ -22,8 +22,9 @@
         <!--Calories-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
 
             <LinearLayout
                 android:layout_width="25dp"
@@ -51,7 +52,7 @@
                 android:gravity="center"
                 android:text="0"
                 android:textAlignment="gravity"
-                android:textSize="20sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,7 +60,6 @@
                 android:layout_marginLeft="31dp"
                 android:layout_marginTop="58dp"
                 android:fontFamily="@font/futuramediumbt"
-
                 android:text="CALORIES"
                 android:textColor="@color/colorLightBlueCustom"
                 android:textSize="10sp" />
@@ -68,7 +68,9 @@
         <!--steps-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center">
 
             <LinearLayout
                 android:layout_width="36dp"
@@ -88,21 +90,19 @@
             <TextView
                 android:id="@+id/tv_steps"
                 android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/circleoutline"
                 android:fontFamily="@font/futuramediumbt"
-
                 android:gravity="center"
                 android:text="0"
                 android:textAlignment="gravity"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="51dp"
                 android:layout_marginTop="85dp"
-
                 android:fontFamily="@font/futuramediumbt"
                 android:text="STEPS"
                 android:textColor="@color/colorLightBlueCustom"
@@ -112,7 +112,9 @@
         <!--distance-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
 
             <LinearLayout
                 android:layout_width="25dp"
@@ -142,7 +144,7 @@
                 android:gravity="center"
                 android:text="0"
                 android:textAlignment="gravity"
-                android:textSize="20sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -190,9 +192,10 @@
 
     <ImageView
         android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:src="@drawable/button"
         android:text="Start/Stop" />

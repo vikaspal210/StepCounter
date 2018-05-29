@@ -65,30 +65,34 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:gravity="center">
             <TextView
                 android:id="@+id/bmi_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="12dp"
                 android:textSize="14sp" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/cup" />
 
             <TextView
                 android:id="@+id/bmi_category_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="12dp"
                 android:textColor="@color/normalweight" />
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <!--Statictics-->

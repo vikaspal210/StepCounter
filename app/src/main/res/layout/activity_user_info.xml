@@ -86,6 +86,8 @@
         android:layout_marginRight="12dp"
         android:background="@color/White"
         android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
         <TextView

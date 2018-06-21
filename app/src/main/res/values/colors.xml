@@ -13,5 +13,6 @@
 
     <!--bmi ranges color-->
     <color name="normalweight">#21BA1B</color>
+    <color name="silvercustom">#EEEEEE</color>
 
 </resources>

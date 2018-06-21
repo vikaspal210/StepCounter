@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,9 @@
     android:background="@color/White"
     tools:context="com.example.cas.stepcounter.ProfileFragment">
 
-
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="137dp"
@@ -34,7 +36,6 @@
         android:text="bla"
         android:textColor="@color/colorLightBlueCustom"
         android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -60,106 +61,106 @@
     <!--height-->
     <LinearLayout
         android:id="@+id/profileHeightCV"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/circle"
+        android:background="@drawable/circle_silver"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/profileAgeCV"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.493">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="@string/height"
-            android:textColor="@color/White"
-            android:textSize="@dimen/secondaryHeading"
-            android:textStyle="bold" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/secondaryHeading" />
 
         <TextView
             android:id="@+id/profile_heightTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/White"
-            android:textSize="@dimen/secondaryHeading" />
-    </LinearLayout>
-
-    <!--weight-->
-
-    <LinearLayout
-        android:id="@+id/profileWeightCV"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/circle"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toStartOf="@+id/profileAgeCV"
-        app:layout_constraintStart_toEndOf="@+id/profileHeightCV">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/weight"
-            android:textColor="@color/White"
-            android:textSize="@dimen/secondaryHeading"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/profileWeightTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/White"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/secondaryHeading" />
     </LinearLayout>
 
     <!--date of birth-->
     <LinearLayout
         android:id="@+id/profileAgeCV"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/circle"
+        android:background="@drawable/circle_silver"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.49">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/birthday"
-            android:textColor="@color/White"
-            android:textSize="@dimen/secondaryHeading"
-            android:textStyle="bold" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/secondaryHeading" />
 
         <TextView
             android:id="@+id/profileAgeTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/White"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/secondaryHeading" />
     </LinearLayout>
+        <!--weight-->
+
+        <LinearLayout
+            android:id="@+id/profileWeightCV"
+            android:layout_width="152.07dp"
+            android:layout_height="152.07dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textColor="@color/White"
+                android:textSize="@dimen/secondaryHeading" />
+
+            <TextView
+                android:id="@+id/profileWeightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:textSize="@dimen/secondaryHeading" />
+        </LinearLayout>
 
         <!--tips-->
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="345dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/step_fragment_bar"
-        android:gravity="center"
         android:text="@string/tips"
         android:textAlignment="gravity"
         android:textColor="@color/White"
@@ -167,5 +168,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
-
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

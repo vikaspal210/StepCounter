@@ -47,11 +47,11 @@ public class UserInfo extends AppCompatActivity {
         setContentView(R.layout.activity_user_info);
 
         //initializing edit text, button;
-        nameET = (EditText) findViewById(R.id.name_ET);
-        heightET = (EditText) findViewById(R.id.height_ET);
-        weightET = (EditText) findViewById(R.id.weight_ET);
-        ageET = (EditText) findViewById(R.id.age_ET);
-        mdoneButton = (Button) findViewById(R.id.done_button);
+        nameET = findViewById(R.id.name_ET);
+        heightET = findViewById(R.id.height_ET);
+        weightET = findViewById(R.id.weight_ET);
+        ageET = findViewById(R.id.age_ET);
+        mdoneButton = findViewById(R.id.done_button);
         //initializing mSharedPreferences
         mSharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 

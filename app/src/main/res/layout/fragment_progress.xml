@@ -82,7 +82,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/cup" />
+                android:src="@drawable/bmi" />
 
             <TextView
                 android:id="@+id/bmi_category_textView"
@@ -102,7 +102,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/blueroundbar"
             android:gravity="center"
-            android:text="STATISTICS"
+            android:text="@string/statistics"
             android:textAlignment="gravity"
             android:textColor="@color/White"
             android:textSize="14sp"
@@ -133,7 +133,7 @@
                 <View
                     android:id="@+id/sunV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Sun" />
+                    android:text="@string/sun" />
             </LinearLayout>
 
             <LinearLayout
@@ -156,7 +156,7 @@
                 <View
                     android:id="@+id/monV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -165,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Mon" />
+                    android:text="@string/mon" />
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +179,7 @@
                 <View
                     android:id="@+id/tueV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -188,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Tue" />
+                    android:text="@string/tue" />
             </LinearLayout>
 
             <LinearLayout
@@ -202,7 +202,7 @@
                 <View
                     android:id="@+id/wedV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -211,7 +211,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Wed" />
+                    android:text="@string/wed" />
             </LinearLayout>
 
             <LinearLayout
@@ -225,7 +225,7 @@
                 <View
                     android:id="@+id/thrV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -234,7 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Thr" />
+                    android:text="@string/thr" />
             </LinearLayout>
 
             <LinearLayout
@@ -248,7 +248,7 @@
                 <View
                     android:id="@+id/friV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -257,7 +257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Fri" />
+                    android:text="@string/fri" />
             </LinearLayout>
 
             <LinearLayout
@@ -271,7 +271,7 @@
                 <View
                     android:id="@+id/satV"
                     android:layout_width="6dp"
-                    android:layout_height="112dp"
+                    android:layout_height="11dp"
                     android:layout_gravity="center"
                     android:background="@drawable/progressbar_states" />
 
@@ -280,7 +280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Sat" />
+                    android:text="@string/sat" />
             </LinearLayout>
 
         </RelativeLayout>

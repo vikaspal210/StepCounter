@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,10 +15,12 @@
         android:id="@+id/realLL1"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--Calories-->
         <RelativeLayout
@@ -60,7 +63,7 @@
                 android:layout_marginLeft="31dp"
                 android:layout_marginTop="58dp"
                 android:fontFamily="@font/futuramediumbt"
-                android:text="CALORIES"
+                android:text="@string/calories"
                 android:textColor="@color/colorLightBlueCustom"
                 android:textSize="10sp" />
         </RelativeLayout>
@@ -84,7 +87,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                android:src="@drawable/steps" />
+                    android:src="@drawable/steps" />
             </LinearLayout>
 
             <TextView
@@ -104,7 +107,7 @@
                 android:layout_marginLeft="51dp"
                 android:layout_marginTop="85dp"
                 android:fontFamily="@font/futuramediumbt"
-                android:text="STEPS"
+                android:text="@string/steps"
                 android:textColor="@color/colorLightBlueCustom"
                 android:textSize="10sp" />
         </RelativeLayout>
@@ -153,7 +156,7 @@
                 android:layout_marginTop="58dp"
 
                 android:fontFamily="@font/futuramediumbt"
-                android:text="DISTANCE"
+                android:text="@string/distance"
                 android:textColor="@color/colorLightBlueCustom"
                 android:textSize="10sp" />
         </RelativeLayout>
@@ -166,14 +169,19 @@
         android:layout_width="230dp"
         android:layout_height="30dp"
         android:layout_below="@+id/realLL1"
-        android:layout_marginTop="20dp"
+
+        android:layout_marginBottom="32dp"
         android:background="@drawable/step_fragment_bar"
         android:elevation="9dp"
         android:fontFamily="@font/futuramediumbt"
         android:gravity="center"
-        android:text="With steps per day, you are"
+        android:text="@string/with_steps_per_day_you_are"
         android:textAlignment="gravity"
-        android:textColor="@color/White" />
+        android:textColor="@color/White"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realLL1"
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/per_day_value"
@@ -181,14 +189,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/realLL1"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_toRightOf="@+id/with"
         android:fontFamily="@font/futuramediumbt"
-        android:text="SEDENTARY"
+        android:text="@string/sedentary"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimary"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toEndOf="@+id/with"
+        app:layout_constraintTop_toBottomOf="@+id/realLL1"
+        app:layout_constraintVertical_bias="0.178" />
 
     <ImageView
         android:id="@+id/btn_start"
@@ -196,9 +212,13 @@
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:src="@drawable/button"
-        android:text="Start/Stop" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

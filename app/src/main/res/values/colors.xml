@@ -7,16 +7,11 @@
     <color name="colorPrimary">#707070</color>
     <color name="colorPrimaryDark">#333333</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="tabColor">#333333</color>
     <color name="tabText">#fffffF</color>
-    <color name="lightGrey">#EEEEEE</color>
     <color name="White">#FFFFFF</color>
     <color name="darkBlue">#0095b6</color>
 
     <!--bmi ranges color-->
-    <color name="underweight">#36A5DD</color>
     <color name="normalweight">#21BA1B</color>
-    <color name="overweight">#EE9408</color>
-    <color name="obese">#D12124</color>
 
 </resources>

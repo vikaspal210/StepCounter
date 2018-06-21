@@ -10,11 +10,6 @@
     </style>
 
 
-    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">10sp</item>
-    </style>
-
-
     <!--no action bar-->
     <style name="AppTheme.NoTitle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>

@@ -19,11 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/White"
-        android:elevation="4dp"
-        android:gravity="center"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:title="Menu"
-        app:titleTextColor="@color/colorLightBlueCustom"></android.support.v7.widget.Toolbar>
+        app:titleTextColor="@color/colorLightBlueCustom" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,32 +35,39 @@
             android:layout_marginBottom="12dp"
             android:background="@drawable/blueroundbar"
             android:onClick="openProfile"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="@color/White" />
 
-        <Button
+        <TextView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/blueroundbar"
             android:onClick="openCalender"
-            android:text="Calendar"
-            android:textColor="@color/White" />
+            android:gravity="center"
+            android:text="@string/calendar"
+            android:textColor="#707070" />
 
-        <Button
+        <TextView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/blueroundbar"
-            android:text="Settings"
-            android:textColor="@color/White" />
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="#707070" />
 
-        <Button
+        <TextView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/blueroundbar"
-            android:text="About the app"
-            android:textColor="@color/White" />
+            android:gravity="center"
+            android:text="@string/about_the_app"
+            android:textColor="#707070" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:src="@drawable/lola" />
     </LinearLayout>
 
 

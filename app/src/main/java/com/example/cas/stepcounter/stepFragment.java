@@ -48,6 +48,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_step, container, false);
 
+        getActivity().getWindow().setBackgroundDrawable(null);
         // Get an instance of the SensorManager
         sensorManager = (SensorManager) getActivity().getSystemService(SENSOR_SERVICE);
         accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -70,7 +71,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     sensorManager.registerListener(stepFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
                     isOff=false;
                 }else{
-                    storeData(numSteps);
+                    /*storeData(numSteps);*/
                     sensorManager.unregisterListener(stepFragment.this);
                 isOff=true;}
 

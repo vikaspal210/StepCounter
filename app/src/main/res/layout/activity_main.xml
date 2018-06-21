@@ -21,10 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/White"
-        android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:title="@string/app_name"
-        app:titleTextColor="@color/colorLightBlueCustom"></android.support.v7.widget.Toolbar>
+        app:titleTextColor="@color/colorLightBlueCustom" />
 
     <!--bottom navigation view-->
     <android.support.design.widget.BottomNavigationView

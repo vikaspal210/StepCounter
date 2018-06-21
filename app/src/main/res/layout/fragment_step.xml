@@ -168,7 +168,6 @@
         android:id="@+id/with"
         android:layout_width="230dp"
         android:layout_height="30dp"
-        android:layout_below="@+id/realLL1"
         android:layout_marginBottom="32dp"
         android:background="@drawable/step_fragment_bar"
         android:elevation="9dp"

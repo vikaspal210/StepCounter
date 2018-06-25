@@ -1,7 +1,5 @@
 package com.example.cas.stepcounter;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.ContentUris;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,9 +8,7 @@ import android.provider.CalendarContract;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -44,9 +40,18 @@ public class Menu extends AppCompatActivity {
     }
 
     public void openProfile(View view) {
-        Fragment profileFragment = ProfileFragment.newInstance();
+        /*Fragment profileFragment = ProfileFragment.newInstance();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.menu_rootLayout, profileFragment);
-        transaction.commit();
+        transaction.commit();*/
+
+        DialogExperiment newFragment = new DialogExperiment();
+        newFragment.show(getFragmentManager(), "ProfileDialog");
+
+    }
+
+    public void openAboutApps(View view) {
+        AboutAppDialog aboutAppDialog = new AboutAppDialog();
+        aboutAppDialog.show(getFragmentManager(), "AboutAppDialog");
     }
 }

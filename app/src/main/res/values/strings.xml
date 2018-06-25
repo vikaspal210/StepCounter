@@ -21,7 +21,7 @@
     <string name="height">Height</string>
     <string name="weight">Weight</string>
     <string name="tips">TIPS +</string>
-    <string name="birthday">Birthday</string>
+    <string name="birthday">Age</string>
     <string name="statistics">STATISTICS</string>
     <string name="sun">Sun</string>
     <string name="mon">Mon</string>
@@ -35,4 +35,6 @@
     <string name="distance">DISTANCE</string>
     <string name="sedentary">SEDENTARY</string>
     <string name="with_steps_per_day_you_are">With steps per day, you are</string>
+    <string name="aboutapp">
+        This pedometer uses the built-in sensor to count your steps. No GPS tracking, so it can greatly save battery. It also tracks your burned calories, walking distance your daily water need and your BMI-->Body Mass Index, etc. All this information will be clearly displayed in graphs.See how much you move on a daily basis with StepCounter</string>
 </resources>

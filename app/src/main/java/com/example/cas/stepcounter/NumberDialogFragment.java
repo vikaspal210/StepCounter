@@ -180,10 +180,10 @@ public class NumberDialogFragment extends DialogFragment {
             public void onClick(DialogInterface dialog, int which) {
             }
         });
-
         builder.setView(linearLayoutV);
         return builder.create();
     }
+
 
     //Number picker value change listener
     public NumberPicker.OnValueChangeListener getValueChangeListener() {

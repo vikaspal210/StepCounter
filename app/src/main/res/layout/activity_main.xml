@@ -36,7 +36,8 @@
         app:itemTextColor="@color/tab_color_state"
         app:menu="@menu/bottom_navigation" />
 
-    <LinearLayout
+    <!--Feedback by Luv-->
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -54,7 +55,7 @@
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:background="@color/colorLightBlueCustom" />
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 </RelativeLayout>

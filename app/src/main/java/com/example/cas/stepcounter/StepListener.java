@@ -7,6 +7,6 @@ package com.example.cas.stepcounter;
 // Will listen to step alerts
 public interface StepListener {
 
-    void step(long timeNs);
+    void step(long timeNs, String textToShow);
 
 }

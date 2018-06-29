@@ -19,6 +19,15 @@ public class UserInfo extends AppCompatActivity {
     public static final String HEIGHT = "heightKey";
     public static final String WEIGHT = "weightKey";
     public static final String AGE = "ageKey";
+    public static final String STEPSMon = "stepsMonKey";
+    public static final String STEPSTue = "stepsTueKey";
+    public static final String STEPSWed = "stepsWedKey";
+    public static final String STEPSThr = "stepsThrKey";
+    public static final String STEPSFri = "stepsFriKey";
+    public static final String STEPSSat = "stepsSatKey";
+    public static final String STEPSSun = "stepsSunKey";
+    public static final String SavedMilisec = "savedMilisec";
+    public static final String SavedDate = "savedDate";
 
 
     //constants
@@ -38,6 +47,11 @@ public class UserInfo extends AppCompatActivity {
     public static String getDefaults(String key, Context context) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getString(key, null);
+    }
+
+    //keyExists
+    public Boolean keyExists(String key, Context context) {
+        return true;
     }
 
     //onCreate

@@ -1,7 +1,5 @@
 package com.example.cas.stepcounter;
 
-import android.widget.SeekBar;
-
 /**
  * Created by cas on 11/7/2017.
  */
@@ -64,7 +62,7 @@ public class StepDetector {
 
         if (velocityEstimate > STEP_THRESHOLD && oldVelocityEstimate <= STEP_THRESHOLD
                 && (timeNs - lastStepTimeNs > STEP_DELAY_NS)) {
-            listener.step(timeNs);
+            listener.step(timeNs, " ");
             lastStepTimeNs = timeNs;
         }
         oldVelocityEstimate = velocityEstimate;

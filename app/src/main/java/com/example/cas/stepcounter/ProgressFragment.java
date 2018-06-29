@@ -71,6 +71,25 @@ public class ProgressFragment extends Fragment {
                 bmiCategoryTV.setText("Obese");
             }
         }
+        //TextView variables for graph steps
+        TextView stepsMon, stepsTue, stepsWed, stepsThr, stepsFri, stepsSat, stepsSun;
+        //initializing steps display TextViews
+        stepsMon = view.findViewById(R.id.monSteps);
+        stepsTue = view.findViewById(R.id.tueSteps);
+        stepsWed = view.findViewById(R.id.wedSteps);
+        stepsThr = view.findViewById(R.id.thrSteps);
+        stepsFri = view.findViewById(R.id.friSteps);
+        stepsSat = view.findViewById(R.id.satSteps);
+        stepsSun = view.findViewById(R.id.sunSteps);
+        //graph setting text
+        stepsMon.setText(UserInfo.getDefaults(UserInfo.STEPSMon, getActivity().getBaseContext()));
+        stepsTue.setText(UserInfo.getDefaults(UserInfo.STEPSTue, getActivity().getBaseContext()));
+        stepsWed.setText(UserInfo.getDefaults(UserInfo.STEPSWed, getActivity().getBaseContext()));
+        stepsThr.setText(UserInfo.getDefaults(UserInfo.STEPSThr, getActivity().getBaseContext()));
+        stepsFri.setText(UserInfo.getDefaults(UserInfo.STEPSFri, getActivity().getBaseContext()));
+        stepsSat.setText(UserInfo.getDefaults(UserInfo.STEPSSat, getActivity().getBaseContext()));
+        stepsSun.setText(UserInfo.getDefaults(UserInfo.STEPSSun, getActivity().getBaseContext()));
+
 
         //return view
         return view;

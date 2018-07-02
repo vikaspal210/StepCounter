@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -50,6 +52,14 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         heightCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //animation
+                final Animation buttonBounceAnim = AnimationUtils.loadAnimation(getActivity().getBaseContext(), R.anim.bounce);
+                // Use bounce interpolator with amplitude 0.2 and frequency 20
+                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+                buttonBounceAnim.setInterpolator(interpolator);
+                heightCV.startAnimation(buttonBounceAnim);
+
+                //initialization
                 counter = 0;
                 showNumberPicker(v);
             }
@@ -57,6 +67,14 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         weightCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //animation
+                final Animation buttonBounceAnim = AnimationUtils.loadAnimation(getActivity().getBaseContext(), R.anim.bounce);
+                // Use bounce interpolator with amplitude 0.2 and frequency 20
+                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+                buttonBounceAnim.setInterpolator(interpolator);
+                weightCV.startAnimation(buttonBounceAnim);
+
+                //initialization
                 counter = 1;
                 showNumberPicker(v);
             }
@@ -64,6 +82,14 @@ public class ProfileFragment extends Fragment implements NumberPicker.OnValueCha
         ageCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //animation
+                final Animation buttonBounceAnim = AnimationUtils.loadAnimation(getActivity().getBaseContext(), R.anim.bounce);
+                // Use bounce interpolator with amplitude 0.2 and frequency 20
+                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+                buttonBounceAnim.setInterpolator(interpolator);
+                ageCV.startAnimation(buttonBounceAnim);
+
+                //initialization
                 counter = 2;
                 showNumberPicker(v);
             }

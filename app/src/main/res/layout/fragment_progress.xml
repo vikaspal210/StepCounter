@@ -129,68 +129,61 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/sunSteps"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <TextView
                     android:id="@+id/monSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/tueSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/wedSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/thrSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/friSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/satSteps"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="---" />
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/cardview_dark_background" />
 
-                <TextView
-                    android:id="@+id/sunSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="---" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sunLL"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:orientation="vertical">
-
-                <View
-                    android:id="@+id/sunV"
-                    android:layout_width="6dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/sunTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/sun" />
             </LinearLayout>
 
             <LinearLayout
@@ -329,6 +322,28 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/sat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sunLL"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/sunV"
+                    android:layout_width="6dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_states" />
+
+                <TextView
+                    android:id="@+id/sunTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sun" />
             </LinearLayout>
 
         </RelativeLayout>

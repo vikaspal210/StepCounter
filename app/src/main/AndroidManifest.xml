@@ -32,7 +32,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity android:name=".DialogExperiment" />
-        <activity android:name=".AboutAppDialog"></activity>
+        <activity android:name=".AboutAppDialog" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.cas.stepcounter;
 
+import android.app.ActivityManager;
 import android.content.ContentUris;
 import android.content.Intent;
 import android.net.Uri;
@@ -44,9 +45,11 @@ public class Menu extends AppCompatActivity {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.menu_rootLayout, profileFragment);
         transaction.commit();*/
+        ((ActivityManager) getBaseContext().getSystemService(ACTIVITY_SERVICE))
+                .clearApplicationUserData();
 
-        DialogExperiment newFragment = new DialogExperiment();
-        newFragment.show(getFragmentManager(), "ProfileDialog");
+        /*DialogExperiment newFragment = new DialogExperiment();
+        newFragment.show(getFragmentManager(), "ProfileDialog");*/
 
     }
 

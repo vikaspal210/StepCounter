@@ -8,7 +8,7 @@
     <string name="calendar">Calendar</string>
     <string name="profile">Profile</string>
     <string name="about_the_app">About the app</string>
-    <string name="settings">Settings</string>
+    <string name="cleardata">Clear Data</string>
     <string name="general">GENERAL</string>
     <string name="name">Name</string>
     <string name="enter_your_name">Enter your name</string>
@@ -35,6 +35,6 @@
     <string name="distance">DISTANCE</string>
     <string name="sedentary">SEDENTARY</string>
     <string name="with_steps_per_day_you_are">With steps per day, you are</string>
-    <string name="aboutapp">
-        This pedometer uses the built-in sensor to count your steps. No GPS tracking, so it can greatly save battery. It also tracks your burned calories, walking distance your daily water need and your BMI-->Body Mass Index, etc. All this information will be clearly displayed in graphs.See how much you move on a daily basis with StepCounter</string>
+    <string name="aboutapp"><![CDATA[
+        This pedometer uses the built-in sensor to count your steps. No GPS tracking, so it can greatly save battery. It also tracks your burned calories, walking distance your daily water need and your BMI—>Body Mass Index, etc. All this information will be clearly displayed in graphs.See how much you move on a daily basis with StepCounter]]></string>
 </resources>

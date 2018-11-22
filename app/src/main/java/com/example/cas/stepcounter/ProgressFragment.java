@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,23 +74,145 @@ public class ProgressFragment extends Fragment {
             }
         }
         //TextView variables for graph steps
-        TextView stepsMon, stepsTue, stepsWed, stepsThr, stepsFri, stepsSat, stepsSun;
+        TextView caloriesTue,caloriesWed, caloriesMon,caloriesThr, caloriesFri ,caloriesSat,caloriesSun;
+        TextView distanceTue ,distanceWed ,distanceMon ,distanceThr ,distanceFri ,distanceSat ,distanceSun;
+        TextView stepsTueTV ,stepsWedTV ,stepsMonTV ,stepsThrTV ,stepsFriTV ,stepsSatTV ,stepsSunTV;
         //initializing steps display TextViews
-        stepsMon = view.findViewById(R.id.monSteps);
-        stepsTue = view.findViewById(R.id.tueSteps);
-        stepsWed = view.findViewById(R.id.wedSteps);
-        stepsThr = view.findViewById(R.id.thrSteps);
-        stepsFri = view.findViewById(R.id.friSteps);
-        stepsSat = view.findViewById(R.id.satSteps);
-        stepsSun = view.findViewById(R.id.sunSteps);
-        //graph setting text
-        stepsMon.setText(UserInfo.getDefaults(UserInfo.STEPSMon, getActivity().getBaseContext()));
-        stepsTue.setText(UserInfo.getDefaults(UserInfo.STEPSTue, getActivity().getBaseContext()));
-        stepsWed.setText(UserInfo.getDefaults(UserInfo.STEPSWed, getActivity().getBaseContext()));
-        stepsThr.setText(UserInfo.getDefaults(UserInfo.STEPSThr, getActivity().getBaseContext()));
-        stepsFri.setText(UserInfo.getDefaults(UserInfo.STEPSFri, getActivity().getBaseContext()));
-        stepsSat.setText(UserInfo.getDefaults(UserInfo.STEPSSat, getActivity().getBaseContext()));
-        stepsSun.setText(UserInfo.getDefaults(UserInfo.STEPSSun, getActivity().getBaseContext()));
+        caloriesTue = view.findViewById(R.id.tueCalories);
+        caloriesWed = view.findViewById(R.id.wedCalories);
+        caloriesMon = view.findViewById(R.id.monCalories);
+        caloriesThr = view.findViewById(R.id.thrCalories);
+        caloriesFri = view.findViewById(R.id.friCalories);
+        caloriesSat = view.findViewById(R.id.satCalories);
+        caloriesSun = view.findViewById(R.id.sunCalories);
+
+        distanceTue = view.findViewById(R.id.tueDistance);
+        distanceWed = view.findViewById(R.id.wedDistance);
+        distanceMon = view.findViewById(R.id.monDistance);
+        distanceThr = view.findViewById(R.id.thrDistance);
+        distanceFri = view.findViewById(R.id.friDistance);
+        distanceSat = view.findViewById(R.id.satDistance);
+        distanceSun = view.findViewById(R.id.sunDistance);
+
+        stepsTueTV = view.findViewById(R.id.tueSteps);
+        stepsWedTV = view.findViewById(R.id.wedSteps);
+        stepsMonTV = view.findViewById(R.id.monSteps);
+        stepsThrTV = view.findViewById(R.id.thrSteps);
+        stepsFriTV = view.findViewById(R.id.friSteps);
+        stepsSatTV = view.findViewById(R.id.satSteps);
+        stepsSunTV = view.findViewById(R.id.sunSteps);
+
+        double stepsMon= 0;
+        double stepsTue= 0;
+        double stepsWed= 0;
+        double stepsThr= 0;
+        double stepsFri= 0;
+        double stepsSat= 0;
+        double stepsSun= 0;
+
+        for(int i=0;i<=6;i++){
+            switch(i){
+                case 0:
+                    try {
+                        stepsMon = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSMon, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 1:
+                    try {
+                        stepsTue = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSTue, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 2:
+                    try {
+                        stepsWed = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSWed, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 3:
+                    try {
+                        stepsThr = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSThr, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 4:
+                    try {
+                        stepsFri = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSFri, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 5:
+                    try {
+                        stepsSat = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSSat, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 6:
+                    try {
+                        stepsSun = Double.parseDouble(UserInfo.getDefaults(UserInfo.STEPSSun, getActivity().getBaseContext()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+            }//switch end
+        }//for end
+
+        //calculating distance
+        double disMon = (double) (stepsMon * 8) / 10000;
+        double disTue = (double) (stepsTue * 8) / 10000;
+        double disWed = (double) (stepsWed * 8) / 10000;
+        double disThr = (double) (stepsThr * 8) / 10000;
+        double disFri = (double) (stepsFri * 8) / 10000;
+        double disSat = (double) (stepsSat * 8) / 10000;
+        double disSun = (double) (stepsSun * 8) / 10000;
+
+
+        //calculating calories
+        int weight = Integer.parseInt(UserInfo.getDefaults(UserInfo.WEIGHT, getActivity().getBaseContext()));
+        double calMon = ((0.75 * weight) / 2000) * stepsMon;
+        double calTue = ((0.75 * weight) / 2000) * stepsTue;
+        double calWed = ((0.75 * weight) / 2000) * stepsWed;
+        double calThr = ((0.75 * weight) / 2000) * stepsThr;
+        double calFri = ((0.75 * weight) / 2000) * stepsFri;
+        double calSat = ((0.75 * weight) / 2000) * stepsSat;
+        double calSun = ((0.75 * weight) / 2000) * stepsSun;
+
+
+        try {
+            //graph setting text to steps
+            stepsMonTV.setText(Double.toString(stepsMon));
+            stepsTueTV.setText(Double.toString(stepsTue));
+            stepsWedTV.setText(Double.toString(stepsWed));
+            stepsThrTV.setText(Double.toString(stepsThr));
+            stepsFriTV.setText(Double.toString(stepsFri));
+            stepsSatTV.setText(Double.toString(stepsSat));
+            stepsSunTV.setText(Double.toString(stepsSun));
+            //graph setting text to distance
+            distanceMon.setText(String.format("%.2f", disMon));
+            distanceTue.setText(String.format("%.2f", disTue));
+            distanceWed.setText(String.format("%.2f", disWed));
+            distanceThr.setText(String.format("%.2f", disThr));
+            distanceFri.setText(String.format("%.2f", disFri));
+            distanceSat.setText(String.format("%.2f", disSat));
+            distanceSun.setText(String.format("%.2f", disSun));
+            //graph setting text to calories
+            caloriesMon.setText(String.format("%.2f", calMon));
+            caloriesTue.setText(String.format("%.2f", calTue));
+            caloriesWed.setText(String.format("%.2f", calWed));
+            caloriesThr.setText(String.format("%.2f", calThr));
+            caloriesFri.setText(String.format("%.2f", calFri));
+            caloriesSat.setText(String.format("%.2f", calSat));
+            caloriesSun.setText(String.format("%.2f", calSun));
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
 
 
         //return view

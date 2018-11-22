@@ -69,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <TextView
                 android:id="@+id/bmi_textView"
                 android:layout_width="wrap_content"
@@ -108,245 +109,312 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="60dp">
 
-            <!--graph bottom line-->
-            <LinearLayout
-                android:layout_width="280dp"
-                android:layout_height="2dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="19dp"
-                android:background="@color/cardview_dark_background" />
+        <!--Graph statistics-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+        <!--Steps LinearLayout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Steps"
+                android:textSize="10dp" />
 
-                <TextView
-                    android:id="@+id/sunSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/monSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/tueSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/wedSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/thrSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/friSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <TextView
-                    android:id="@+id/satSteps"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="---"
-                    android:textColor="@color/cardview_dark_background" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/monLL"
+            <TextView
+                android:id="@+id/monSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/sunLL"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/monV"
-                    android:layout_width="6dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/monTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/mon" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tueLL"
+            <TextView
+                android:id="@+id/tueSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/monLL"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/tueV"
-                    android:layout_width="6dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/tueTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/tue" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/wedLL"
+            <TextView
+                android:id="@+id/wedSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/tueLL"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/wedV"
-                    android:layout_width="6dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/wedTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/wed" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/thrLL"
+            <TextView
+                android:id="@+id/thrSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/wedLL"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/thrV"
-                    android:layout_width="6dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/thrTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/thr" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/friLL"
+            <TextView
+                android:id="@+id/friSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/thrLL"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/friV"
-                    android:layout_width="6dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/friTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/fri" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/satLL"
+            <TextView
+                android:id="@+id/satSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/friLL"
-                android:orientation="vertical">
-
-                <View
-                    android:id="@+id/satV"
-                    android:layout_width="6dp"
-                    android:layout_height="11dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
-
-                <TextView
-                    android:id="@+id/satTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/sat" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sunLL"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+            <TextView
+                android:id="@+id/sunSteps"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
 
-                <View
-                    android:id="@+id/sunV"
-                    android:layout_width="6dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/progressbar_states" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/sunTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/sun" />
-            </LinearLayout>
+        <!--Calories LinearLayout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-        </RelativeLayout>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Calories (cal)"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/monCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/tueCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/wedCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/thrCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/friCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/satCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+            <TextView
+                android:id="@+id/sunCalories"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+        </LinearLayout>
+
+        <!--Distance LinearLayout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Distance (km)"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/monDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/tueDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/wedDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/thrDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/friDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10sp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/satDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10sp"
+                android:textColor="@color/cardview_dark_background" />
+            <TextView
+                android:id="@+id/sunDistance"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="10dp"
+                android:textColor="@color/cardview_dark_background" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="6dp"
+            android:background="@color/colorLightBlueCustom"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="15dp"/>
+        <!--week names tags-->
+        <LinearLayout
+            android:id="@+id/monLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/monTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="@string/mon"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:id="@+id/tueTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tue"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:id="@+id/wedTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/wed"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/thrTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/thr"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:id="@+id/friTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/fri"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/satTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sat"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/sunTV"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sun"
+                android:textAlignment="center" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

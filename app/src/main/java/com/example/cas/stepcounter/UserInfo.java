@@ -79,10 +79,11 @@ public class UserInfo extends AppCompatActivity {
                         TextUtils.isEmpty(ageET.getText().toString().trim())) {
                     Toast.makeText(getBaseContext(), "Fields can't be empty!", Toast.LENGTH_LONG).show();
                 } else {
+                    //setting Edit Text input to Shared Preferences
                     setDefaults(Name, nameET.getText().toString(), getBaseContext());
-                setDefaults(HEIGHT, heightET.getText().toString(), getBaseContext());
-                setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
-                setDefaults(AGE, ageET.getText().toString(), getBaseContext());
+                    setDefaults(HEIGHT, heightET.getText().toString(), getBaseContext());
+                    setDefaults(WEIGHT, weightET.getText().toString(), getBaseContext());
+                    setDefaults(AGE, ageET.getText().toString(), getBaseContext());
                     //add preference to check if UserInfo added
                     getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                             .putBoolean("isFirstRun", false).apply();

@@ -161,7 +161,11 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                             , getActivity().getBaseContext());
                 } else {
                     stepDataBase[0] = 0;
-                    UserInfo.setDefaults(UserInfo.SavedMilisec, Long.toString(System.currentTimeMillis()), getActivity().getBaseContext());
+                    UserInfo.setDefaults(UserInfo.SavedDate
+                            , Long.toString(System.currentTimeMillis())
+                            , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
+                    storeData(numSteps);
                 }
                 break;
             case 2:
@@ -179,6 +183,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     UserInfo.setDefaults(UserInfo.SavedDate
                             , DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault()).format(new Date())
                             , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
+                    storeData(numSteps);
                 }
                 break;
             case 3:
@@ -195,6 +201,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     UserInfo.setDefaults(UserInfo.SavedDate
                             , DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault()).format(new Date())
                             , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
+                    storeData(numSteps);
                 }
                 break;
             case 4:
@@ -211,6 +219,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     UserInfo.setDefaults(UserInfo.SavedDate
                             , DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault()).format(new Date())
                             , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
+                    storeData(numSteps);
                 }
                 break;
 
@@ -228,6 +238,8 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     UserInfo.setDefaults(UserInfo.SavedDate
                             , DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault()).format(new Date())
                             , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
+                    storeData(numSteps);
                 }
                 break;
             case 6:
@@ -244,6 +256,7 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
                     UserInfo.setDefaults(UserInfo.SavedDate
                             , DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault()).format(new Date())
                             , getActivity().getBaseContext());
+                    //After Initialization we recall storeData(numSteps) to save steps to SharedPreference STEPDay Key to Its Value
                     storeData(numSteps);
                 }
 
@@ -281,7 +294,6 @@ public class stepFragment extends Fragment implements SensorEventListener, StepL
 
     //true if we are in same week, false if we are in next week
     public Boolean isSameWeek(Date currentDate) {
-
         try {
             Date savedDate;
             //if already initialized savedDate, we get a Date Object
